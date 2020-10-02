@@ -19,7 +19,7 @@ class ApplicationMain
 
 		#if (js && html5)
 		#if (munit || utest)
-		lime.system.System.embed("Pong", null, 0, 0);
+		lime.system.System.embed("Pong", null, 500, 500);
 		#end
 		#else
 		create(null);
@@ -51,21 +51,21 @@ class ApplicationMain
 			element: null,
 			frameRate: 60,
 			#if !web fullscreen: false, #end
-			height: 0,
+			height: 500,
 			hidden: #if munit true #else false #end,
 			maximized: false,
 			minimized: false,
 			parameters: {},
 			resizable: true,
 			title: "Pong",
-			width: 0,
+			width: 500,
 			x: null,
 			y: null,
 		};
 
 		attributes.context = {
 			antialiasing: 0,
-			background: 16777215,
+			background: 3355443,
 			colorDepth: 32,
 			depth: true,
 			hardware: true,
@@ -99,7 +99,7 @@ class ApplicationMain
 		app.createWindow(attributes);
 		
 		#elseif !air
-		app.window.context.attributes.background = 16777215;
+		app.window.context.attributes.background = 3355443;
 		app.window.frameRate = 60;
 		#end
 
