@@ -4,7 +4,7 @@ import openfl.display.Sprite;
 
 class Ball extends Sprite {
 
-    private function new() {
+    public function new() {
 
         // uses Sprite constructor
         super();
